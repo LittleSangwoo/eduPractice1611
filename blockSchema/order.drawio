@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="qGdNMzNRyjENnNoso2Nz">
+    <mxGraphModel dx="480" dy="515" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0NPmqNeB07XSseWWKdP3-13" edge="1" parent="1" source="0NPmqNeB07XSseWWKdP3-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="0NPmqNeB07XSseWWKdP3-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-1" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="Начало" vertex="1">
+          <mxGeometry height="40" width="160" x="240" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-23" edge="1" parent="1" source="0NPmqNeB07XSseWWKdP3-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="0NPmqNeB07XSseWWKdP3-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-3" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="Выбор заказа и нового статуса (или причины отмены)" vertex="1">
+          <mxGeometry height="70" width="160" x="240" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-16" edge="1" parent="1" source="0NPmqNeB07XSseWWKdP3-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="0NPmqNeB07XSseWWKdP3-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-19" edge="1" parent="1" source="0NPmqNeB07XSseWWKdP3-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="0NPmqNeB07XSseWWKdP3-24">
+          <mxGeometry relative="1" x="-0.3074" as="geometry">
+            <mxPoint x="480" y="497.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-8" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Заказ может быть выполнен?" vertex="1">
+          <mxGeometry height="95" width="160" x="240" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-27" edge="1" parent="1" source="0NPmqNeB07XSseWWKdP3-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="0NPmqNeB07XSseWWKdP3-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Обновление статуса заказа в таблице &lt;code&gt;Orders&lt;/code&gt;" vertex="1">
+          <mxGeometry height="70" width="160" x="240" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-11" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="Сообщение об успешном обновлении статуса заказа" vertex="1">
+          <mxGeometry height="70" width="160" x="240" y="882" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-12" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="Конец" vertex="1">
+          <mxGeometry height="40" width="160" x="240" y="1036" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-18" edge="1" parent="1" source="0NPmqNeB07XSseWWKdP3-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="0NPmqNeB07XSseWWKdP3-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Да" vertex="1">
+          <mxGeometry height="30" width="60" x="311" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Нет" vertex="1">
+          <mxGeometry height="30" width="60" x="400" y="467" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-25" edge="1" parent="1" source="0NPmqNeB07XSseWWKdP3-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="583" y="663.8" />
+            </Array>
+            <mxPoint x="320.0120481927711" y="663.831325301205" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-24" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Установка статуса «Отменён» с записью причины в &lt;code&gt;Orders&lt;/code&gt;" vertex="1">
+          <mxGeometry height="70" width="160" x="503" y="462.5" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-28" edge="1" parent="1" source="0NPmqNeB07XSseWWKdP3-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="0NPmqNeB07XSseWWKdP3-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="343.6111111111111" y="852.3611111111111" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-26" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Запись изменения в журнал &lt;code&gt;OrderStatusHistory&lt;/code&gt;" vertex="1">
+          <mxGeometry height="70" width="160" x="240" y="728" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

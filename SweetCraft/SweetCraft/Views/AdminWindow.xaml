@@ -1,0 +1,17 @@
+<Window x:Class="SweetCraft.Views.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Управление данными" Height="760" Width="1180" MinHeight="520" MinWidth="780"
+        Icon="{StaticResource BakeryIcon}" WindowStartupLocation="CenterOwner">
+    <DockPanel Margin="20">
+        <StackPanel DockPanel.Dock="Top" Margin="0,0,0,12">
+            <TextBlock Text="Управление таблицами базы данных" FontSize="24" FontWeight="Bold" Margin="0,0,0,12" />
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal"><Button Content="Добавить" Command="{Binding AddCommand}"/><Button Content="Сохранить изменения" Click="SaveButton_Click"/><Button Content="Выбрать картинку товара" Command="{Binding ChooseImageCommand}"/><Button Content="Удалить запись" Command="{Binding DeleteCommand}"/></StackPanel>
+                <ComboBox Width="310" HorizontalAlignment="Left" ItemsSource="{Binding TableNames}" SelectedItem="{Binding SelectedTable}" />
+            </DockPanel>
+            <TextBlock Text="{Binding Message}" Margin="0,8,0,0" Foreground="{StaticResource AccentBrush}" TextWrapping="Wrap" />
+        </StackPanel>
+        <DataGrid x:Name="RecordsGrid" ItemsSource="{Binding Rows}" SelectedItem="{Binding SelectedRow}" AutoGenerateColumns="True" AutoGeneratingColumn="DataGrid_AutoGeneratingColumn" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="False" SelectionUnit="FullRow" />
+    </DockPanel>
+</Window>

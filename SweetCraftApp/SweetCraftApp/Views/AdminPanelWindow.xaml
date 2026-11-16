@@ -1,0 +1,37 @@
+﻿<Window x:Class="SweetCraftApp.Views.AdminPanelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SweetCraftApp.Views"
+        mc:Ignorable="d"
+        Title="Панель управления каталогом" Height="600" Width="900">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Управление товарами" FontSize="24" FontWeight="Bold" Margin="0,0,0,15"/>
+
+        <DataGrid Grid.Row="1" ItemsSource="{Binding ManageableProducts}" SelectedItem="{Binding SelectedProduct}" 
+                  AutoGenerateColumns="False" CanUserAddRows="True" SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Binding="{Binding Name}" Width="*"/>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Price}"/>
+                <DataGridTextColumn Header="Старая цена" Binding="{Binding OldPrice}"/>
+                <DataGridCheckBoxColumn Header="Доступен" Binding="{Binding IsAvailable}"/>
+                <DataGridTextColumn Header="Срок (ч)" Binding="{Binding LeadTimeHours}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,15,0,0">
+            <Button Content="Загрузить фото" Command="{Binding UploadImageCommand}" Style="{StaticResource PrimaryButtonStyle}" Margin="0,0,10,0"/>
+            <Button Content="Удалить товар" Command="{Binding DeleteProductCommand}" Background="#E53935" Foreground="White" Padding="15,10" Margin="0,0,10,0"/>
+
+            <!-- Кнопка, требуемая NFR1 -->
+            <Button x:Name="btnSaveChanges" Content="Сохранить изменения" Command="{Binding SaveChangesCommand}" Style="{StaticResource PrimaryButtonStyle}"/>
+        </StackPanel>
+    </Grid>
+</Window>

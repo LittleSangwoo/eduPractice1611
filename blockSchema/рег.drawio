@@ -1,0 +1,68 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="qGdNMzNRyjENnNoso2Nz">
+    <mxGraphModel dx="833" dy="894" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0NPmqNeB07XSseWWKdP3-13" edge="1" parent="1" source="0NPmqNeB07XSseWWKdP3-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="0NPmqNeB07XSseWWKdP3-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-1" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="Начало" vertex="1">
+          <mxGeometry height="40" width="160" x="240" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-14" edge="1" parent="1" source="0NPmqNeB07XSseWWKdP3-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="0NPmqNeB07XSseWWKdP3-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-3" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="Выбор товара, начинки, декора, надписи и количества" vertex="1">
+          <mxGeometry height="70" width="160" x="240" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-15" edge="1" parent="1" source="0NPmqNeB07XSseWWKdP3-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="0NPmqNeB07XSseWWKdP3-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Проверка статуса доступности товара в таблице &lt;code&gt;Products&lt;/code&gt;" vertex="1">
+          <mxGeometry height="70" width="160" x="240" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-16" edge="1" parent="1" source="0NPmqNeB07XSseWWKdP3-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="0NPmqNeB07XSseWWKdP3-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-19" edge="1" parent="1" source="0NPmqNeB07XSseWWKdP3-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="0NPmqNeB07XSseWWKdP3-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-8" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Товар доступен (IsAvailable = 1)?" vertex="1">
+          <mxGeometry height="85" width="160" x="240" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-20" edge="1" parent="1" source="0NPmqNeB07XSseWWKdP3-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="0NPmqNeB07XSseWWKdP3-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="275" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-9" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="Сообщение «Товар временно недоступен»" vertex="1">
+          <mxGeometry height="70" width="160" x="468" y="457.5" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-17" edge="1" parent="1" source="0NPmqNeB07XSseWWKdP3-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="0NPmqNeB07XSseWWKdP3-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span&gt;Добавление или обновление позиции в &lt;code&gt;CartItems&lt;/code&gt; и перерасчет суммы&lt;/span&gt;&lt;span&gt;&lt;sup class=&quot;superscript&quot;&gt;&lt;/sup&gt;&lt;/span&gt;&lt;span&gt;.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="70" width="160" x="240" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-11" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="Сообщение о добавлении товара в корзину" vertex="1">
+          <mxGeometry height="70" width="160" x="240" y="681" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-12" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="Конец" vertex="1">
+          <mxGeometry height="40" width="160" x="240" y="783" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-18" edge="1" parent="1" source="0NPmqNeB07XSseWWKdP3-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="0NPmqNeB07XSseWWKdP3-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Да" vertex="1">
+          <mxGeometry height="30" width="60" x="311" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="0NPmqNeB07XSseWWKdP3-22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Нет" vertex="1">
+          <mxGeometry height="30" width="60" x="400" y="467" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

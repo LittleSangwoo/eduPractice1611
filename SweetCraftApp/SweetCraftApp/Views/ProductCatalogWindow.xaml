@@ -1,0 +1,73 @@
+﻿<Window x:Class="SweetCraftApp.Views.ProductCatalogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SweetCraftApp.Views"
+        mc:Ignorable="d"
+        Title="SweetCraft - Каталог продукции" Height="700" Width="1000"
+        WindowStartupLocation="CenterScreen">
+
+    <DockPanel LastChildFill="True">
+        <!-- Верхнее меню: адаптивный DockPanel -->
+        <Border DockPanel.Dock="Top" Background="{StaticResource PrimaryColor}" Padding="10">
+            <DockPanel>
+                <ContentControl Content="{StaticResource LogoIcon}" Margin="0,0,10,0"/>
+                <TextBlock Text="SweetCraft" FontWeight="Bold" FontSize="20" Foreground="White" VerticalAlignment="Center"/>
+
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Right">
+                    <Button Content="Личный кабинет" Style="{StaticResource PrimaryButtonStyle}" Margin="5,0"/>
+                    <Button Content="Корзина" Style="{StaticResource PrimaryButtonStyle}"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <!-- Каталог товаров (Адаптивный WrapPanel внутри ListView) -->
+        <ListView ItemsSource="{Binding Products}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderThickness="0" Margin="10">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel IsItemsHost="True" Orientation="Horizontal" ItemWidth="300"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border x:Name="CardBorder" BorderBrush="#E0E0E0" BorderThickness="1" CornerRadius="8" Padding="10" Margin="10" Background="White">
+                        <StackPanel>
+                            <!-- Бейдж Премиум (По умолчанию скрыт) -->
+                            <TextBlock x:Name="PremiumBadge" Text="★ Премиум" Foreground="#FFA000" FontWeight="Bold" Visibility="Collapsed" HorizontalAlignment="Right"/>
+
+                            <Image Source="{Binding Product.ImagePath}" Height="150" Stretch="UniformToFill" Margin="0,10"/>
+
+                            <TextBlock Text="{Binding Product.Name}" FontWeight="Bold" FontSize="16" TextWrapping="Wrap" Margin="0,5,0,0"/>
+
+                            <!-- Цены и скидки (Требование F3) -->
+                            <StackPanel Orientation="Horizontal" Margin="0,5">
+                                <TextBlock Text="{Binding CurrentPrice, StringFormat={}{0:C}}" FontSize="18" Foreground="{StaticResource PrimaryColor}" FontWeight="Bold"/>
+
+                                <TextBlock x:Name="OldPriceText" Text="{Binding OldPrice, StringFormat={}{0:C}}" 
+                                           TextDecorations="Strikethrough" Foreground="Gray" Margin="10,2,0,0" Visibility="Collapsed"/>
+                            </StackPanel>
+
+                            <Button Content="В корзину" Command="{Binding DataContext.AddToCartCommand, RelativeSource={RelativeSource AncestorType=ListView}}" 
+                                    CommandParameter="{Binding}" Style="{StaticResource PrimaryButtonStyle}" Margin="0,10,0,0"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Триггеры для Премиум и Скидок (Требование F3) -->
+                    <DataTemplate.Triggers>
+                        <!-- Выделение товаров > 1000 -->
+                        <DataTrigger Binding="{Binding IsPremium}" Value="True">
+                            <Setter TargetName="CardBorder" Property="Background" Value="{StaticResource PremiumColor}"/>
+                            <Setter TargetName="PremiumBadge" Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                        <!-- Отображение зачеркнутой цены -->
+                        <DataTrigger Binding="{Binding HasDiscount}" Value="True">
+                            <Setter TargetName="OldPriceText" Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </DataTemplate.Triggers>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </DockPanel>
+</Window>
