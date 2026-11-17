@@ -21,6 +21,8 @@ namespace SweetCraft
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e) => viewModel.Password = passwordBox.Password;
         private void RegistrationPasswordBox_PasswordChanged(object sender, RoutedEventArgs e) => viewModel.RegistrationPassword = registrationPasswordBox.Password;
 
+        private void GuestButton_Click(object sender, RoutedEventArgs e) => OpenCatalog(null);
+
         private void OnLoginSucceeded(Users user)
         {
             AuthenticatedUser = user;

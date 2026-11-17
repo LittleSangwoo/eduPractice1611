@@ -27,6 +27,7 @@ namespace SweetCraft.ViewModels
             using (var context = new SweetCraftDBEntities())
                 foreach (var filling in context.Fillings.Where(item => item.IsActive).OrderBy(item => item.Name).ToList()) Fillings.Add(filling);
             RefreshCommand = new RelayCommand(_ => Refresh());
+            ResetFiltersCommand = new RelayCommand(_ => ResetFilters());
             AddToCartCommand = new RelayCommand(product => AddToCart(product as ProductCardViewModel), _ => currentUser != null);
             Refresh();
         }
@@ -35,6 +36,7 @@ namespace SweetCraft.ViewModels
         public ObservableCollection<Categories> Categories { get; }
         public ObservableCollection<Fillings> Fillings { get; }
         public ICommand RefreshCommand { get; }
+        public ICommand ResetFiltersCommand { get; }
         public ICommand AddToCartCommand { get; }
         public Users CurrentUser => currentUser;
         public bool IsSignedIn => currentUser != null;
@@ -45,6 +47,14 @@ namespace SweetCraft.ViewModels
         public int? SelectedFillingId { get => selectedFillingId; set { if (SetProperty(ref selectedFillingId, value)) Refresh(); } }
         public string SelectedSort { get => selectedSort; set { if (SetProperty(ref selectedSort, value)) Refresh(); } }
         public string StatusMessage { get => statusMessage; private set => SetProperty(ref statusMessage, value); }
+
+        private void ResetFilters()
+        {
+            SearchText = null;
+            SelectedCategoryId = null;
+            SelectedFillingId = null;
+            SelectedSort = "По названию";
+        }
 
         private void Refresh()
         {

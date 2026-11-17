@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\учёба\up16.11\SweetCraft\SweetCraft\App.xaml
-6-1656633237
-2367394133
-43813233858
+61537235629
+4329433555
+4585324950
 18-1686357033
-MainWindow.xaml;Views\CatalogWindow.xaml;Views\CartWindow.xaml;Views\MainWindow.xaml;Views\ProfileWindow.xaml;Views\AdminWindow.xaml;
+Views\CatalogWindow.xaml;Views\ProductDetailsWindow.xaml;Views\CartWindow.xaml;MainWindow.xaml;Views\ProfileWindow.xaml;Views\AdminWindow.xaml;
 
-True
+False
 

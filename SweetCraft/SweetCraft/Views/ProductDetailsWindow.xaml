@@ -1,0 +1,40 @@
+<Window x:Class="SweetCraft.Views.ProductDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="О товаре" Height="620" Width="1000" MinHeight="500" MinWidth="760"
+        Icon="{StaticResource BakeryIcon}" WindowStartupLocation="CenterOwner">
+    <Grid Margin="24">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.1*"/>
+            <ColumnDefinition Width="1.4*"/>
+        </Grid.ColumnDefinitions>
+        <Border Background="{StaticResource PremiumBackgroundBrush}" CornerRadius="8" Padding="8" ClipToBounds="True" Effect="{StaticResource CardShadowEffect}">
+            <Image Source="{Binding ImagePath}" Stretch="Uniform"/>
+        </Border>
+        <ScrollViewer Grid.Column="1" Margin="24,0,0,0" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <TextBlock Text="{Binding Name}" FontFamily="{StaticResource MontserratFont}" FontSize="30" FontWeight="Bold" TextWrapping="Wrap"/>
+                <TextBlock Text="{Binding PremiumLabel}" Foreground="{StaticResource AccentLightBrush}" FontWeight="Bold" Margin="0,6,0,12"/>
+                <TextBlock Text="Категория" FontWeight="SemiBold"/>
+                <TextBlock Text="{Binding CategoryName}" Foreground="{StaticResource MutedBrush}" Margin="0,2,0,12"/>
+                <TextBlock Text="Описание" FontWeight="SemiBold"/>
+                <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Foreground="{StaticResource MutedBrush}" Margin="0,2,0,16"/>
+                <TextBlock Text="Цена" FontWeight="SemiBold"/>
+                <StackPanel Orientation="Horizontal" Margin="0,2,0,12">
+                    <TextBlock Text="{Binding PreviousPrice, StringFormat={}{0:N2} ₽}" TextDecorations="Strikethrough" Foreground="{StaticResource MutedBrush}" Margin="0,0,8,0"/>
+                    <TextBlock Text="{Binding CurrentPrice, StringFormat={}{0:N2} ₽}" FontSize="22" FontWeight="Bold"/>
+                </StackPanel>
+                <TextBlock Text="Вес, г" FontWeight="SemiBold"/>
+                <TextBlock Text="{Binding Product.WeightGrams}" Foreground="{StaticResource MutedBrush}" Margin="0,2,0,12"/>
+                <TextBlock Text="Срок хранения, ч" FontWeight="SemiBold"/>
+                <TextBlock Text="{Binding Product.ShelfLifeHours}" Foreground="{StaticResource MutedBrush}" Margin="0,2,0,12"/>
+                <TextBlock Text="Срок изготовления, ч" FontWeight="SemiBold"/>
+                <TextBlock Text="{Binding Product.LeadTimeHours}" Foreground="{StaticResource MutedBrush}" Margin="0,2,0,18"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Content="Закрыть" Style="{StaticResource SecondaryButtonStyle}" Click="CloseButton_Click"/>
+                    <Button x:Name="AddToCartButton" Content="В корзину" Style="{StaticResource SuccessButtonStyle}" Click="AddToCartButton_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

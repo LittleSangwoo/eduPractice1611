@@ -12,6 +12,7 @@ namespace SweetCraft.ViewModels
         private readonly AdminService adminService;
         private readonly ImageService imageService = new ImageService();
         private string selectedTable;
+        private ObservableCollection<object> rows;
         private object selectedRow;
         private string message;
 
@@ -32,7 +33,11 @@ namespace SweetCraft.ViewModels
 
         public bool IsAdministrator { get; }
         public ObservableCollection<string> TableNames { get; }
-        public ObservableCollection<object> Rows { get; }
+        public ObservableCollection<object> Rows
+        {
+            get => rows;
+            private set => SetProperty(ref rows, value);
+        }
         public ICommand TableChangedCommand { get; }
         public ICommand AddCommand { get; }
         public ICommand SaveCommand { get; }
@@ -47,12 +52,15 @@ namespace SweetCraft.ViewModels
             if (adminService == null || string.IsNullOrWhiteSpace(SelectedTable)) return;
             try
             {
-                Rows.Clear();
-                foreach (object row in adminService.Load(SelectedTable)) Rows.Add(row);
+                Rows = new ObservableCollection<object>(adminService.Load(SelectedTable));
                 SelectedRow = null;
                 Message = "Загружено записей: " + Rows.Count;
             }
-            catch (Exception exception) { Message = ValidationService.GetUserFriendlyError(exception, "Не удалось загрузить таблицу."); }
+            catch (Exception exception)
+            {
+                Rows = new ObservableCollection<object>();
+                Message = ValidationService.GetUserFriendlyError(exception, "Не удалось загрузить таблицу.");
+            }
         }
 
         private void AddRow()

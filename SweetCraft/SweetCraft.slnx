@@ -1,3 +1,4 @@
 <Solution>
-  <Project Path="SweetCraft/SweetCraft.csproj" />
+  <Project Path="SweetCraft/SweetCraft.csproj" Id="06d473a3-fe5d-4b25-a393-f6c252b4f187" />
+  <Project Path="TestProject/TestProject.csproj" Id="2b670e68-a6a2-43d4-9564-03d5365e1f0b" />
 </Solution>

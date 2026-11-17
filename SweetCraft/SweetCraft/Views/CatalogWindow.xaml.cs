@@ -11,7 +11,6 @@ namespace SweetCraft.Views
 
         public CatalogWindow(Users user)
         {
-            if (user == null) throw new ArgumentNullException(nameof(user));
             InitializeComponent();
             currentUser = user;
             DataContext = new CatalogViewModel(user);
@@ -28,6 +27,24 @@ namespace SweetCraft.Views
                 Close();
             }
         }
+        private void ProductDetailsButton_Click(object sender, RoutedEventArgs e)
+        {
+            var card = (sender as FrameworkElement)?.DataContext as ProductCardViewModel;
+            if (card == null) return;
+
+            var viewModel = (CatalogViewModel)DataContext;
+            Action addToCart = currentUser == null ? null : (Action)(() => viewModel.AddToCartCommand.Execute(card));
+            new ProductDetailsWindow(card, addToCart) { Owner = this }.ShowDialog();
+        }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            var login = new MainWindow();
+            Application.Current.MainWindow = login;
+            login.Show();
+            Close();
+        }
+
         private void AdminButton_Click(object sender, RoutedEventArgs e) => new AdminWindow(currentUser) { Owner = this }.ShowDialog();
     }
 }

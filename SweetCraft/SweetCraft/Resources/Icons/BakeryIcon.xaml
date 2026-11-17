@@ -3,10 +3,10 @@
     <DrawingImage x:Key="BakeryIcon">
         <DrawingImage.Drawing>
             <DrawingGroup>
-                <GeometryDrawing Brush="#FF9B4F35" Geometry="M0,0 H64 V64 H0 Z" />
-                <GeometryDrawing Brush="#FFFFF7EE" Geometry="M12,43 C16,25 48,25 52,43 L52,51 L12,51 Z" />
-                <GeometryDrawing Brush="#FFE9A64D" Geometry="M13,37 C18,18 45,18 51,37 C42,32 22,32 13,37 Z" />
-                <GeometryDrawing Brush="#FFFFF7EE" Geometry="M21,19 A3,3 0 1 0 27,19 A3,3 0 1 0 21,19 M29,15 A3,3 0 1 0 35,15 A3,3 0 1 0 29,15 M37,19 A3,3 0 1 0 43,19 A3,3 0 1 0 37,19" />
+                <GeometryDrawing Brush="#FFE56B73" Geometry="M0,0 H64 V64 H0 Z" />
+                <GeometryDrawing Brush="#FFFFF7E6" Geometry="M12,43 C16,25 48,25 52,43 L52,51 L12,51 Z" />
+                <GeometryDrawing Brush="#FFF9A826" Geometry="M13,37 C18,18 45,18 51,37 C42,32 22,32 13,37 Z" />
+                <GeometryDrawing Brush="#FFFFF7E6" Geometry="M21,19 A3,3 0 1 0 27,19 A3,3 0 1 0 21,19 M29,15 A3,3 0 1 0 35,15 A3,3 0 1 0 29,15 M37,19 A3,3 0 1 0 43,19 A3,3 0 1 0 37,19" />
             </DrawingGroup>
         </DrawingImage.Drawing>
     </DrawingImage>

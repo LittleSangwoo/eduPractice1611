@@ -7,7 +7,7 @@
         <Grid.ColumnDefinitions><ColumnDefinition Width="1.05*"/><ColumnDefinition Width="1.35*"/></Grid.ColumnDefinitions>
         <Border Grid.Column="0" Background="{StaticResource AccentBrush}" CornerRadius="16" Padding="24" Margin="0,0,20,0">
             <StackPanel VerticalAlignment="Center">
-                <Viewbox Width="130" Height="130" HorizontalAlignment="Left" Margin="0,0,0,20"><Canvas Width="120" Height="120"><Ellipse Width="112" Height="112" Canvas.Left="4" Canvas.Top="4" Fill="#FFF7EE"/><Path Data="M 26,74 C 35,41 85,41 94,74 L 94,88 L 26,88 Z" Fill="#9B4F35"/><Path Data="M 28,65 C 39,32 80,32 92,65 C 77,57 43,57 28,65 Z" Fill="#E9A64D"/><Ellipse Width="12" Height="12" Canvas.Left="37" Canvas.Top="38" Fill="#9B4F35"/><Ellipse Width="12" Height="12" Canvas.Left="54" Canvas.Top="29" Fill="#9B4F35"/><Ellipse Width="12" Height="12" Canvas.Left="72" Canvas.Top="38" Fill="#9B4F35"/></Canvas></Viewbox>
+                <Viewbox Width="130" Height="130" HorizontalAlignment="Left" Margin="0,0,0,20"><Canvas Width="120" Height="120"><Ellipse Width="112" Height="112" Canvas.Left="4" Canvas.Top="4" Fill="#FFFFF7E6"/><Path Data="M 26,74 C 35,41 85,41 94,74 L 94,88 L 26,88 Z" Fill="#FFE56B73"/><Path Data="M 28,65 C 39,32 80,32 92,65 C 77,57 43,57 28,65 Z" Fill="#FFF9A826"/><Ellipse Width="12" Height="12" Canvas.Left="37" Canvas.Top="38" Fill="#FFE56B73"/><Ellipse Width="12" Height="12" Canvas.Left="54" Canvas.Top="29" Fill="#FFE56B73"/><Ellipse Width="12" Height="12" Canvas.Left="72" Canvas.Top="38" Fill="#FFE56B73"/></Canvas></Viewbox>
                 <TextBlock Text="SweetCraft" FontSize="30" FontWeight="Bold" Foreground="White"/>
                 <TextBlock Text="Вкусные моменты начинаются здесь." FontSize="16" Foreground="White" TextWrapping="Wrap" Margin="0,8,0,0"/>
             </StackPanel>
@@ -20,6 +20,7 @@
                         <TextBlock Text="Email или телефон"/><TextBox Text="{Binding EmailOrPhone, UpdateSourceTrigger=PropertyChanged}" MaxLength="100" Margin="0,4,0,12"/>
                         <TextBlock Text="Пароль"/><PasswordBox x:Name="passwordBox" MaxLength="128" PasswordChanged="PasswordBox_PasswordChanged" Margin="0,4,0,14"/>
                         <Button Content="Войти" Command="{Binding LoginCommand}"/>
+                        <Button Content="Войти как гость" Click="GuestButton_Click" HorizontalAlignment="Stretch" Margin="4,10,4,0"/>
                     </StackPanel>
                 </TabItem>
                 <TabItem Header="Регистрация">
